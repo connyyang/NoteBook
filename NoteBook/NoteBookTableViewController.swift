@@ -33,7 +33,19 @@ class NoteBookTableViewController: UITableViewController {
     
     struct StoryBoard{
         static let noteCell = "NoteCell"
+        static let showNoteDetails = "ShowNoteDetails"
     }
+    
+    
+    @IBAction func addNoteDidTap(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: StoryBoard.showNoteDetails, sender: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        fetchNotes()
+    }
+ 
     
     func fetchNotes()
     {
@@ -51,12 +63,7 @@ class NoteBookTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    func AddNote()
-    {
-        let noteEntity = NSEntityDescription.entity(forEntityName: "Note", in: managedObjectContent)
-        
-        
-    }
+    
 
 
     // MARK: - Table view data source
@@ -95,6 +102,21 @@ class NoteBookTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let notes = notes
+        {
+            let note = notes[indexPath.row]
+            self.performSegue(withIdentifier: StoryBoard.showNoteDetails, sender: note)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let noteDetailsVC = segue.destination as? NoteDetailsViewController
+        {
+            noteDetailsVC.note = sender as? Note
+        }
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.

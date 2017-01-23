@@ -49,7 +49,11 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem systemItem="add" id="JtJ-bJ-ZB2"/>
+                        <barButtonItem systemItem="add" id="JtJ-bJ-ZB2">
+                            <connections>
+                                <action selector="addNoteDidTap:" destination="wBr-Kz-26g" id="9JY-WE-Ku0"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Root View Controller" id="rx7-6z-72T"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -62,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="226" y="247"/>
         </scene>
-        <!--View Controller-->
+        <!--Note Details View Controller-->
         <scene sceneID="tdQ-sn-Se0">
             <objects>
-                <viewController id="Fc4-rR-7Hw" sceneMemberID="viewController">
+                <viewController id="Fc4-rR-7Hw" customClass="NoteDetailsViewController" customModule="NoteBook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aeL-Pg-Jk7"/>
                         <viewControllerLayoutGuide type="bottom" id="u9X-oq-GcV"/>
@@ -73,12 +77,37 @@
                     <view key="view" contentMode="scaleToFill" id="Xf4-ZB-TBt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CYF-jI-HJe">
+                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CYF-jI-HJe" secondAttribute="trailing" constant="8" id="OED-uM-Ors"/>
+                            <constraint firstItem="CYF-jI-HJe" firstAttribute="top" secondItem="aeL-Pg-Jk7" secondAttribute="bottom" constant="8" id="hfg-EM-vbi"/>
+                            <constraint firstItem="CYF-jI-HJe" firstAttribute="leading" secondItem="Xf4-ZB-TBt" secondAttribute="leading" constant="8" id="jBe-Wm-zOH"/>
+                            <constraint firstAttribute="bottom" secondItem="CYF-jI-HJe" secondAttribute="bottom" constant="8" id="sfj-hK-BNn"/>
+                        </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Done" id="6Np-A4-BgU">
+                            <connections>
+                                <action selector="doneButtonDidTap:" destination="Fc4-rR-7Hw" id="1yo-js-FHh"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <connections>
+                        <outlet property="doneButton" destination="6Np-A4-BgU" id="zI5-rw-sAT"/>
+                        <outlet property="notePad" destination="CYF-jI-HJe" id="ReJ-td-vXr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5j1-e7-pZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="256"/>
+            <point key="canvasLocation" x="989.60000000000002" y="255.92203898050977"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sIk-r3-WK2">

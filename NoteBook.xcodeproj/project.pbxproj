@@ -14,6 +14,7 @@
 		AEB03F4E1E35FFB4000058F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB03F4D1E35FFB4000058F1 /* Assets.xcassets */; };
 		AEB03F511E35FFB4000058F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB03F4F1E35FFB4000058F1 /* LaunchScreen.storyboard */; };
 		AEB03F591E36052E000058F1 /* NoteBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB03F581E36052E000058F1 /* NoteBookTableViewController.swift */; };
+		AEB03F5F1E361DC6000058F1 /* NoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB03F5E1E361DC6000058F1 /* NoteDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AEB03F501E35FFB4000058F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEB03F521E35FFB4000058F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEB03F581E36052E000058F1 /* NoteBookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteBookTableViewController.swift; sourceTree = "<group>"; };
+		AEB03F5E1E361DC6000058F1 /* NoteDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				AEB03F431E35FFB4000058F1 /* AppDelegate.swift */,
 				AEB03F451E35FFB4000058F1 /* ViewController.swift */,
 				AEB03F471E35FFB4000058F1 /* Main.storyboard */,
+				AEB03F5E1E361DC6000058F1 /* NoteDetailsViewController.swift */,
 				AEB03F581E36052E000058F1 /* NoteBookTableViewController.swift */,
 				AEB03F4D1E35FFB4000058F1 /* Assets.xcassets */,
 				AEB03F4F1E35FFB4000058F1 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				AEB03F591E36052E000058F1 /* NoteBookTableViewController.swift in Sources */,
 				AEB03F461E35FFB4000058F1 /* ViewController.swift in Sources */,
 				AEB03F441E35FFB4000058F1 /* AppDelegate.swift in Sources */,
+				AEB03F5F1E361DC6000058F1 /* NoteDetailsViewController.swift in Sources */,
 				AEB03F4C1E35FFB4000058F1 /* NoteBook.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
