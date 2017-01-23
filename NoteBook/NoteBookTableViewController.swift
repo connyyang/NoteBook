@@ -14,9 +14,15 @@ class NoteBookTableViewController: UITableViewController {
     var notes : [Note]?
     
     var managedObjectContent : NSManagedObjectContext!
+    
+
+    @IBOutlet weak var addButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Note Book"
+        navigationItem.rightBarButtonItem = addButton
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedObjectContent = appDelegate.persistentContainer.viewContext
@@ -41,6 +47,15 @@ class NoteBookTableViewController: UITableViewController {
         }catch let error as NSError{
             print("Cannot fetch data: \(error.localizedDescription)")
         }
+        
+        self.tableView.reloadData()
+    }
+    
+    func AddNote()
+    {
+        let noteEntity = NSEntityDescription.entity(forEntityName: "Note", in: managedObjectContent)
+        
+        
     }
 
 

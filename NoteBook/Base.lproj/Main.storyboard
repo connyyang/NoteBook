@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MaP-8K-mp9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Root View Controller-->
         <scene sceneID="oJE-O5-PvA">
             <objects>
-                <tableViewController id="wBr-Kz-26g" sceneMemberID="viewController">
+                <tableViewController id="wBr-Kz-26g" customClass="NoteBookTableViewController" customModule="NoteBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QyN-Db-fWZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,14 +48,19 @@
                             <outlet property="delegate" destination="wBr-Kz-26g" id="UeN-Ue-pAy"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem systemItem="add" id="JtJ-bJ-ZB2"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Root View Controller" id="rx7-6z-72T"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addButton" destination="JtJ-bJ-ZB2" id="APK-9P-mN1"/>
                         <segue destination="Fc4-rR-7Hw" kind="show" identifier="ShowNoteDetails" id="o11-r9-slW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2S-lF-PUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186" y="256"/>
+            <point key="canvasLocation" x="226" y="247"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tdQ-sn-Se0">
