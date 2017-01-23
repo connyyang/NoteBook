@@ -39,7 +39,14 @@ class NoteDetailsViewController: UIViewController {
         
         if let note = note
         {
+            note.noteText = notePad.text
+            note.updateTime = Date() as NSDate
             
+            do{
+                try self.managedObjectContext.save()
+            }catch let error as NSError{
+                print(error.localizedDescription)
+            }
         }
         else
         {

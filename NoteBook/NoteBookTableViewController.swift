@@ -111,8 +111,9 @@ class NoteBookTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let noteDetailsVC = segue.destination as? NoteDetailsViewController
+        if segue.identifier == StoryBoard.showNoteDetails
         {
+            let noteDetailsVC = segue.destination as! NoteDetailsViewController
             noteDetailsVC.note = sender as? Note
         }
         
